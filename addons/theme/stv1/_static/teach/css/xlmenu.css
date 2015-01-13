@@ -1,0 +1,43 @@
+
+.menu { z-index: 100;  position: absolute; margin-top:7px; margin-left:45px; }
+.menu li { float: left; font-size: 14px; text-align: center; line-height: 18px; padding: 0; }
+.li_3{ background:url(../images/jtgray.jpg) no-repeat right; width:60px; cursor:pointer; display:block;   }
+.li_3:hover {background:url(../images/jtgreen.jpg) no-repeat right; width:60px; display:block; color:#21a830;}
+.li_3_content { position: absolute; left: 0px; line-height: 40px; z-index: 99; display: none; margin-left:-50px; margin-top:15px; height: 200px; width: 180px;  border:#EEEEEE 1px solid; background:#FFFFFF; -moz-box-shadow: 3px 3px 3px #EEEEEE; /*firefox*/
+ -webkit-box-shadow: 3px 3px 3px #EEEEEE;/*safari或chrome*/
+ box-shadow:3px 3px 3px #EEEEEE;/*opera或ie9*/
+  -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+	 behavior: url(../js/ie-css3.htc); }
+.li_3_content p { color:#626262; font-size:16px; line-height:30px; }
+.li_3_content p span{ margin-left:15px;}
+.subnavg{ color:#01A310;}
+.Triangle_con {height:9px; background:url(../images/bird.png) center no-repeat; display:block; margin-top:-9px;}
+.li_3_content .revisebut{padding:0 10px; background:#309EFD; cursor:pointer; margin-right:43px;  color:#FFFFFF; font-size:16px; display:block; -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+	 behavior: url(../js/ie-css3.htc);}
+.li_3_content em{ font-style:normal;}
+
+
+#subnav {display:block; font-size:15px;}
+#subnav .mainlevel {float:left; text-align:center; display:block;}
+#subnav .mainlevel a {color:#fff; text-decoration:none; line-height:35px; color: #C9C9C9; height:34px; text-align:center; padding:3px
+ 20px; display:block; _width:48px;}
+#subnav .mainlevel a:hover { text-decoration:none; color:#626262;}
+#subnav .mainlevel ul {position:absolute; margin-top:7px; padding:10px;  display:none; margin-left:-75px; /*IE is great need, width>=li.length*/border:#EEEEEE 1px solid; background:#FFFFFF; -moz-box-shadow: 3px 3px 3px #E4E4E4;  /*firefox*/
+ -webkit-box-shadow: 3px 3px 3px #E4E4E4;/*safari或chrome*/
+ box-shadow:3px 3px 3px #E4E4E4;/*opera或ie9*/
+  -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius:5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+	 behavior: url(../js/ie-css3.htc);}
+#subnav .mainlevel li {float:left; font-size:14px; }
+#subnav .mainlevel li a {padding:0 12px; line-height:24px; height:24px; display:block; _padding-bottom:6px; color:#CFCBCC/*IE6 only*/}
+#subnav .mainlevel li a:hover {color:#02A411; text-decoration:none; }
+#subnav li a em/*input an em tag as a space*/ {padding:0 3px;}
+.Triangle_con1 {height:11px; background:url(../images/bird.png) no-repeat; display:block; width:17px; margin:0 auto; margin-top:-21px;/*IE6 only*/}
+.mainlevel input{ width:80px; float:right; margin-left:5px; margin-top:10px; height:25px; padding:5px;}
+.mainlevel input:hover{ border:1px solid #01A411; }
+

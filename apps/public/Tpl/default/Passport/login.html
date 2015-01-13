@@ -1,0 +1,178 @@
+<include file="__THEME__/_header" />
+<link href="__THEME__/uteach/css/bootstrap.min.css" rel="stylesheet">
+
+<div id="login-bg">
+    <div class="login-b" style="opacity:1;">
+        <img id="login_bg" src="{$login_bg}" style="display:block;width:100%;height:100%;margin-left:0;opacity:1;visibility:visible;" />
+     </div>
+     <div id="login-content" style="display: none">
+
+	      <div id="wrap-hd" style="opacity: 1; visibility: visible;">
+     <!--     <div class="logo" <php>if(strpos($_SERVER['HTTP_USER_AGENT'],'MSIE 6.0') !== false):</php>style="_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{$site.logo}', sizingMethod='crop');_background:none;"<php>else:</php>style="background:url({$site.logo}) no-repeat;"<php>endif;</php>></div>-->
+          <div class="login-guide" style="text-align: center;"><p style="font-size: 35px;margin: 0px;margin-right: 25px;">{$site.site_slogan}</p></div>
+          <div class="s-login" style="margin-top: 40px">
+                <form id="ajax_login_form" method="POST" action="{:U('public/Passport/doLogin')}">
+                <div class="login-bd">
+                    <ul class="clearfix" model-node="login_input">
+                        <li class="s-row" style="margin-top: 33px">
+                          <div class="input ">
+<!--
+                             <label class="l-login">{:L('PUBLIC_ACCOUNT')}</label>
+-->
+                             <div class="input-username">
+                                 <input id="account_input" name="login_email" type="text" class="s-txt1" autocomplete="off" placeholder="{:L('PUBLIC_ACCOUNT')}"/>
+                                 <div class="txt-list on-changes" style="z-index:999">
+                                   <p>请选择或继续输入...</p>
+                                   <ul>
+                                      <li email="" rel="show"></li>
+                                      <volist name="emailSuffix" id="vo">
+                                        <li email="{$vo}" rel="show"></li>
+                                      </volist>
+                                    </ul>
+                                  </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li style="width: 30px;height: 40px;margin-top: 20px">
+                            <span style="color: #ffffff;font-size: 30px">...</span>
+                        </li>
+                        <li style="width: 121px;height: 118px" class="logo-dong">
+                            <img src="{$site.logo}">
+                        </li>
+                        <li style="width: 30px;height: 40px;margin-top: 20px">
+                            <span style="color: #ffffff;font-size: 30px">...</span>
+                        </li>
+                        <li class="s-row" style="margin-top: 33px;margin-left: 14px">
+                          <div class="input input-password" style="">
+<!--
+                            <label class="l-login">{:L('PUBLIC_PASSWORD')}</label>
+-->
+                            <php>if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false):</php>
+                            <input id="pwd_input" name="login_password" type="password" class="s-txt1" autocomplete="off" placeholder="{:L('PUBLIC_PASSWORD')}"/>
+                            <php>else:</php>
+                            <input id="pwd_input" name="login_password" type="password" class="s-txt1" autocomplete="off" placeholder="{:L('PUBLIC_PASSWORD')}"/>
+                            <php>endif;</php>
+                          </div>
+                        </li>
+
+
+
+                    </ul>
+                    <ul class="clearfix" style="margin: auto 0;text-align: center;margin-top: 30px;margin-right: 22px">
+                        <li class="action-submit" style="width: 100%"><a href="javascript:;" onclick="$('#ajax_login_form').submit();" class="submit-click">
+                            <img style="width: 100%;height: 100%" src="http://localhost/schools/apps/public/_static/images/uteachEnter.gif">
+                        </a>
+                        </li>
+                        <div class="progress" style="height: 10px;width: 160px;margin-left:215px;display: none">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" >
+
+                            </div>
+                        </div>
+
+                    </ul>
+                    <ul class="clearfix" style="margin: auto 0;text-align: center;margin-top: 30px;margin-right: 22px">
+                        <!--<li class="s-row1" style="text-align: center;">
+                            <php>if($register_type == 'open'):</php>
+                            <a onclick="javascript:window.open('{:U('public/Register')}','_self')">注册帐号</a>
+                            <php>endif;</php>
+                        </li>-->
+                        <li class="s-row1" style="width: 100%">
+                            <!--<a class="s-f-psd" href="{:U('public/Passport/findPassword')}">{:L('FORGET_PASSWORD')}?</a>-->
+                            <!--
+                                                        <a class="auto left" event-node="login_remember" href="javascript:;"><span class="check-ok"><input type="hidden" name="login_remember" value="1" /></span>{:L('PUBLIC_LOGIN_AUTOMATICALLY')}</a>
+                            -->
+                            <a class="" event-node="login_remember" href="javascript:;"><span class="check-ok"><input type="hidden" name="login_remember" value="1" /></span>记住密码</a>
+
+                        </li>
+                    </ul>
+                </div>
+                </form>
+                <div id="js_login_input" style="display:none;bottom: 10%" class="error-box" ></div>
+                <php>if(Addons::requireHooks('login_input_footer') && Addons::hook('login_input_footer')):</php>
+                <div class="login-ft" style="">
+                    <span>其它帐号登录：</span>{:Addons::hook('login_input_footer')}
+                </div>
+                <php>endif;</php>
+          </div>         
+        </div>
+      </div>
+      <!--<div id="footer" style="opacity:1;visibility:visible;margin:0;bottom:0;position:absolute;width:100%;height:50px;">
+            <div class="footer-wrap" style="left:50%;margin-left:-300px;position:absolute;top:0;width:560px;border:none">
+              <p>{$site.site_footer}</p>
+              <volist name='site_guest_nav' id='st'>
+                <a href="{$st.url}" target="{$st.target}" style="color:#999">{$st.navi_name}</a>&nbsp;&nbsp;
+              </volist>
+            </div>
+      </div>-->
+</div>
+<eq name='site.site_online_count' value='1'>
+    <script src="{:SITE_URL}/online_check.php?uid={$mid}&uname={$user.uname}&mod={:MODULE_NAME}&app={:APP_NAME}&act={:ACTION_NAME}&action=trace"></script>
+</eq>
+
+<script src="__APP__/login.js" type="text/javascript"></script>
+<script src="__THEME__/uteach/js/bootstrap.min.js"></script>
+<script>
+    $('#login-content').fadeIn(3000);
+
+    $("#login-content").css("display","block");
+
+    $(document).ready(function(){
+
+        $('.submiclick').click(function(e){
+            /*$('.input-username,dot-left').addClass('animated fadeOutRight')
+            $('.input-password,dot-right').addClass('animated fadeOutLeft')
+            $('.btn-submit').addClass('animated fadeOutUp')*/
+            $('.input-username').fadeOut(2000);
+            $('.input-password').fadeOut(2000);
+            $('.logo-dong').fadeOut(2000);
+
+            $('.logo-dong').css('margin-top','-20px')
+            $('.logo-dong').fadeIn(2000);var newValue = 10;
+            $('.action-submit').fadeOut(1000);
+            $('.progress').fadeIn(2000);
+            //$('.action-submit').html('<div class="progress" style="height: 10px;width: 120px"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" ></div></div>');
+            setInterval(function () {
+                        //$('.avatar').addClass('avatar-top');
+                        //$('.submit').html('<i class="fa fa-spinner fa-spin text-white"></i>');
+                        //$('.progress .progress-bar').progressbar();
+
+
+                        $(".progress-bar").css('width',newValue+'%');   //初始化进度条，如果已经初始化则会跳过
+                        //var newValue = ($(".progress-bar").width*100 + 10)+'%'; //读取进度条现有值并计算出新值
+                        /*alert($(".progress-bar").css('width'));
+                        $(".progress .progress-bar").css("width", newValue);  //设置进度条新值*/
+                        newValue = newValue + 5;
+                        if(newValue == 100){
+                            clearInterval(this);
+                        }
+                        /*$(".progress .progress-bar").progressbar({value: 30});
+                        alert("当前值是: " + $(".progress .progress-bar").progressbar("option", "value"));
+                        $(".progress .progress-bar").progressbar("option", "value", 60);
+                        alert("当前值是: " + $(".progress .progress-bar").progressbar("option", "value"));
+                        $(".progress .progress-bar").progressbar("option", "value", 90);
+                        alert("当前值是: " + $(".progress .progress-bar").progressbar("option", "value"));*/
+                    },
+                    20);
+
+           /* setTimeout(function () {
+                        $('#ajax_login_form').submit();
+                        //window.location.reload();
+                    },
+                    1500);*/
+
+
+        });
+
+
+    });
+    function updateProgressbarValue(){
+        $(".progress .progress-bar").progressbar({value: 0});   //初始化进度条，如果已经初始化则会跳过
+        var newValue = $(".progress .progress-bar").progressbar("option", "value") + 3; //读取进度条现有值并计算出新值
+        $(".progress .progress-bar").progressbar("option", "value", newValue);  //设置进度条新值
+        setTimeout(updateProgressbarValue, 50);    //使用setTimeout函数延迟调用updateProgressbarValue函数，延迟时间为500毫秒
+    }
+
+
+</script>
+</body>
+</html>

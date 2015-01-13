@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+
+
+<link rel="stylesheet" type="text/css" href="__THEME__/teach/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="__THEME__/teach/css/style.css" />
+
+<link rel="stylesheet" type="text/css" href="__THEME__/teach/css/xlmenu.css"/>
+<script src="__THEME__/teach/js/jquery-1.4.2.js" type="text/javascript"></script>
+<script src="__THEME__/teach/js/jquery.backgroundpos.js" type="text/javascript"></script>
+<script src="__THEME__/teach/js/menu.js" type="text/javascript"></script>
+<script src="__THEME__/teach/js/jquery-1.11.0.min.js"></script>
+    <script src="__THEME__/teach/js/jquery.min.js" type="text/javascript"></script>
+    <script language="javascript" src="__THEME__/teach/js/jquery.easing.min.js"></script>
+    <script language="javascript" src="__THEME__/teach/js/custom.js"></script>
+    <script type="text/javascript" src="__THEME__/teach/js/slick.js"></script>
+    <script type="text/javascript" src="__THEME__/teach/js/scripts.js"></script>
+    <script src="__THEME__/teach/checkskin/icheck.js?v=1.0.2" type="text/javascript"></script>
+    <link rel="stylesheet" href="__THEME__/teach/css/lrtkfy.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/popstyle.css"/>
+    <link href="__THEME__/teach/checkskin/skins/all.css?v=1.0.2" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/layout.css"/>
+    <style>
+        .openlogin a, .openlogina a, .openloginb a, .openloginc a, .openlogind a, .openlogine a, .openloginf a, .openloging a{ color:#000000;}
+        #loginalerta,#loginalertb,#loginalertc,#loginalertd,#loginalertf{ width:800px; background:#fff; position:fixed; height:450px; margin-top:-225px; top:50%;   left:50%; margin-left:-400px; z-index:999999; display:none; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:14px; -moz-border-radius: 5px;       /* Gecko browsers */
+            -webkit-border-radius:5px;   /* Webkit browsers */
+            border-radius:5px;            /* W3C syntax */ }
+
+
+
+        #loginalerte,.loginalert, #loginalertg{ width:520px; background:#fff; position:fixed; height:210px; margin-top:-105px; top:50%;   left:50%; margin-left:-260px; z-index:999999; display:none; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:14px; -moz-border-radius: 8px;       /* Gecko browsers */
+            -webkit-border-radius:5px;   /* Webkit browsers */
+            border-radius:5px;            /* W3C syntax */}
+
+
+        .greenwz{ color:#49a05b;}
+
+    </style>
+
+
+</head>
+
+<body>
+<!-- 弹出窗口开始-->
+<div class="clear"></div>
+<div class="loginmask"></div>
+
+<!-- 删除文件夹弹出窗口-->
+<div id="loginalerte" >
+    <div class="shchu"><img src="__THEME__/teach/images/shanchu.png" />
+        <p style="font-size:22px;">您确定删除“新建文件夹”吗？</p>
+        <p >该文件夹下所有的内容将会删除。</p>
+        <div class="demobtn"><a href="">删除</a><a href="">取消</a></div>
+    </div>
+</div>
+<!-- 删除文件夹弹出窗口结束-->
+<!-- 下载弹出框开始 -->
+<div id="loginalertd"  >
+    <i class="closealert fr"></i>
+    <div class="lolertit">试卷下载</div>
+    <div class="sloetit">纸张大小</div>
+    <div class="sslotit">
+        <p class="titg">A5竖版</p>
+        <p style="margin-left:150px;">B4横版</p>
+    </div>
+
+
+    <div class="leftslo">
+        <div class="demo-list">
+            <ul><li style=" margin-left:155px;">下载版本</li>
+                <li><input tabindex="3" type="radio" id="input-3" name="demo-radio" /> word2007/2010;扩展名docx</li>
+                <li><input tabindex="4" type="radio" id="input-4" name="demo-radio" checked /> word2007/2010;扩展名docx</li>
+                <li><input tabindex="5" type="radio" id="input-5" name="demo-radio" /> PDF</li>
+            </ul>
+            <script>
+                $(document).ready(function(){
+                    var callbacks_list = $('.demo-callbacks ul');
+                    $('.demo-list input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
+                        callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+                    }).iCheck({
+                        checkboxClass: 'icheckbox_square-blue',
+                        radioClass: 'iradio_square-green',
+                        increaseArea: '20%'
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="rightslo">
+        <div class="demo-list">
+            <ul><li style="margin-left:150px;">试卷类型</li>
+                <li><input tabindex="6" type="radio" id="input-6" name="demo-radio" checked /> 学生试卷（无答案）</li>
+                <li><input tabindex="7" type="radio" id="input-7" name="demo-radio" /> 普通试卷（答案在卷尾）</li>
+                <li><input tabindex="8" type="radio" id="input-8" name="demo-radio" /> 教师试卷（每题后边跟答案）</li>
+            </ul>
+            <script>
+                $(document).ready(function(){
+                    var callbacks_list = $('.demo-callbacks ul');
+                    $('.demo-list input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
+                        callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+                    }).iCheck({
+                        checkboxClass: 'icheckbox_square-blue',
+                        radioClass: 'iradio_square-green',
+                        increaseArea: '20%'
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="demobtn"><a href="">取消</a><a href="">打印</a><a href="">下载</a></div>
+</div>
+<!-- 下载弹出框结束 -->
+<div class="header" id="XX">
+  <div class="head_l">
+    <ul>
+      <li class="logo">uTeach</li>
+      <li class="nav">组卷<span></span></li>
+    </ul>
+  </div>
+  <div class="head_m" style=" padding-left:125px;" >
+  <ul>
+  <li class="save"></li>
+  <li class="addc"></li>
+  <li class="down openlogind" onClick="return false;"></li>
+      <li class="delete openlogine" style="margin-right:0;" onClick="return false;"></li>
+  </ul>
+  </div>
+   <div class="head_r" >
+  <div class="nr_green" style=" float:right; margin-right:20px;"><span class="arrow"></span><img src="__THEME__/teach/images/toux.gif" /><span>屠志鹏</span></div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="shadow"></div>
+<div class="title"><img src="__THEME__/teach/images/jt.png" /><a href="{:U('public/Index/index')}">返回</a>2015年北京市普通高中会考化学</div>
+<div class="contain12">
+<ul>
+<li class="document"><div class="doctu"></div><p class="docgree">7月试卷</p></li>
+    <a href="{:U('public/Index/newZJ')}"><li style="padding-top:18px;"><img src="__THEME__/teach/images/12.gif" /><p style="margin-top:0;">2015年北京市普通<br />高中会考化学</p><p class="docb" style="margin-top:0;">2015/10/7</p></li></a>
+</ul>
+</div>
+<div class="clear"></div>
+
+<div id="foot" style="position:fixed; ">
+<ul>
+      <li class="logo_f">uTeach</li>
+      <li class="nav_f">组卷</li>
+	  <li class="greesj"></li>
+	  <li>2015年北京市普通高中会考化学</li>
+    </ul>
+</div>
+</body></html>
