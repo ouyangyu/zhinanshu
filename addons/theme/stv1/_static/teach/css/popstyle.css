@@ -1,8 +1,8 @@
-#loginalert{ width:800px; background:#fff; position:fixed; height:700px; margin-top:-350px; top:50%;   left:50%; margin-left:-400px; z-index:999999; display:none; font-family: "Hiragino Sans GB","Microsoft Yahei",arial,ï¿½ï¿½ï¿½ï¿½,"Helvetica Neue",Helvetica,STHeiTi,sans-serif; font-size:14px; -moz-border-radius: 5px;       /* Gecko browsers */
+#loginalert{ width:800px; background:#fff; position:fixed; height:700px; margin-top:-350px; top:50%;   left:50%; margin-left:-400px; z-index:99; display:none; font-family: "Hiragino Sans GB","Microsoft Yahei",arial,ËÎÌå,"Helvetica Neue",Helvetica,STHeiTi,sans-serif; font-size:14px; -moz-border-radius: 5px;       /* Gecko browsers */
     -webkit-border-radius:5px;   /* Webkit browsers */
     border-radius:5px;            /* W3C syntax */ 
 	 behavior: url(../js/ie-css3.htc);}
-.loginmask{ width:100%; height:100%; z-index:888888; background:#515151; position:fixed; top:0; left:0; display:none; }
+.loginmask{ width:100%; height:100%; z-index:8; background:#515151; position:fixed; top:0; left:0; display:none; }
 .closealert{ width:20px; height:20px; cursor:pointer; background:url(../images/icons.png) no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out; }
 .closealert:hover{transform:rotate(-180deg);-moz-transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-o-transform:rotate(-180deg);}
 .closealert{ width:20px; height:20px; cursor:pointer; background:url(../images/icons.png) no-repeat;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out; }
@@ -29,7 +29,7 @@
 	margin:0 auto;
 	margin-top:15px;
 	margin-bottom:15px;
-	font-family: "Hiragino Sans GB","Microsoft Yahei",arial,ï¿½ï¿½ï¿½ï¿½,"Helvetica Neue",Helvetica,STHeiTi,sans-serif;
+	font-family: "Hiragino Sans GB","Microsoft Yahei",arial,ËÎÌå,"Helvetica Neue",Helvetica,STHeiTi,sans-serif;
 }
 .clear{ clear:both;}
 .popgreen{ color:#00A60E;}
@@ -71,6 +71,7 @@
 .bfive:hover{ background:url(../images/sample2.jpg) no-repeat; width:211px; height:209px; display:block; cursor:pointer;}
 .bfour{ background:url(../images/sample3.jpg) no-repeat; width:211px; height:209px; display:block; cursor:pointer;}
 .bfour:hover{ background:url(../images/sample.jpg) no-repeat; width:211px; height:209px; display:block; cursor:pointer;}
-.shchu{ margin:35px; margin-top:45px;}
+.shchu{ margin:35px; margin-top:50px;}
 .shchu p{ font-weight:normal; text-align:left; line-height:30px;}
 .shchu img{ float:left; margin-right:10px;}
+
