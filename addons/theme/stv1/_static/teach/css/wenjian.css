@@ -1,0 +1,12 @@
+*{margin: 0px;padding: 0px;box-sizing: border-box;}
+.alldom{width:100%;height:100%;}
+.alldom ul{padding:0;list-style:none;margin-top: 30px;margin-left: 30px;}
+.alldom ul li{overflow:hidden;width:172px;height:200px;float:left;margin-right:30px;border:1px solid #fff;position:relative;transition:all 0.2s ease-in 0.1s; padding:30px 20px; cursor:pointer;}
+.alldom ul li.bgclocrc{background:#effff0; }
+.alldom ul li:hover{background:#effff0; }
+.alldom input.changename{border-radius:0px; bottom:10px;overflow:hidden;width:100%;font-weight: normal;color: #464646;margin-top: 10px;height:20px;line-height:20px;text-align:center;font-size:15px;z-index:0;border:none;}
+.alldom input.changename:hover{background:none;color:#30b33f;}
+.alldom input{width:100%;height:20px;line-height:20px;text-align:center;background:none;border:1px solid #30b33f;border-radius:2px;transition:all 0.2s ease-in 0.1s;margin:0;font-weight: normal;}
+.alldom input:hover{background:#09F;color:#fff;maxlength:10}
+.doctuadd{ background:url(../images/12.gif) no-repeat; width:125px; height:141px; display:block; line-height:106px; font-size:25px; color:#E9B500;}
+.doctuadd:hover{background:url(../images/12.gif) no-repeat #FFFFFF; }

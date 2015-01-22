@@ -3,7 +3,7 @@
 *{margin:0px;padding:0px;}
 body{font-size:14px;
 	 font-family: "Hiragino Sans GB","Microsoft Yahei",arial,宋体,"Helvetica Neue",Helvetica,STHeiTi,sans-serif;
-	background:#FFFFFF;}
+	background:#FFFFFF;overflow: hidden}
 p,li,em,ol.ul{ margin:0; padding:0;  list-style:none;}
 .clear{ clear:both;}
 .header {width: 100%; margin:0; padding:0; height:60px; position: relative;  padding-top:5px; }
@@ -194,3 +194,5 @@ p,li,em,ol.ul{ margin:0; padding:0;  list-style:none;}
 .contain12 p.docb{ color:#62C4F5;}
 .doctu{ background:url(../images/shu.png) no-repeat; width:132px; height:106px; display:block; line-height:106px; font-size:25px; color:#E9B500;}
 .contain12 p.docgreex{ border:1px solid #30B33F; padding:3px 10px; background:#ffffff; margin-top:10px; }
+
+
