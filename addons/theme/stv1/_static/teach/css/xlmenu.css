@@ -14,7 +14,7 @@ ul, li {padding:0; margin:0;}
 .li_3_content p span{ margin-left:15px;}
 .subnavg{ color:#01A310;}
 .Triangle_con {height:9px; background:url(../images/bird.png) center no-repeat; display:block; margin-top:-9px;}
-.li_3_content .revisebut{padding:0 10px; background:#309EFD; cursor:pointer; margin-right:43px; margin-top:5px;  color:#FFFFFF; font-size:16px; display:block; -moz-border-radius: 5px;      /* Gecko browsers */
+.li_3_content .revisebut{ width:80px; line-height:40px; height:40px; margin: 0 auto; background:#309EFD; cursor:pointer;  margin-top:5px;  color:#FFFFFF; font-size:16px; display:block; -moz-border-radius: 5px;      /* Gecko browsers */
     -webkit-border-radius:5px;   /* Webkit browsers */
     border-radius:5px;            /* W3C syntax */
 	 behavior: url(../js/ie-css3.htc);}
@@ -36,7 +36,7 @@ ul, li {padding:0; margin:0;}
 #subnav .mainlevel ul li {float:left; font-size:14px; line-height:40px; height:40px; }
 #subnav .mainlevel ul li a { display:block;}
 #subnav .mainlevel ul li a:hover {color:#02A411; text-decoration:none; }
-.Triangle_con1 {height:11px; background:url(../images/bird.png) no-repeat; display:block; width:17px; margin:0 auto; margin-top:-11px;/*IE6 only*/}
+.Triangle_con1 {height:11px; background:url(../images/bird.png) no-repeat; display:block; width:17px; margin:0 auto; margin-top:-16px;/*IE6 only*/}
 .mainlevel input{ width:80px; float:right; margin-left:5px; margin-top:10px; height:22px; padding:5px;}
 .mainlevel input:hover{ border:1px solid #01A411; }
 

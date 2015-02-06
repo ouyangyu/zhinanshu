@@ -2,6 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>test</title>
+    <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/slick.css"/>
 <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/style.css" />
 <link rel="stylesheet" type="text/css" href="__THEME__/teach/css/xlmenu.css"/>
@@ -17,7 +18,7 @@
 <script type="text/javascript" src="__THEME__/teach/js/lrtk1.js"></script>
 <script src="__THEME__/teach/js/jquery.min.js" type="text/javascript"></script>
 <script src="__THEME__/teach/js/jquery.nicescroll.min.js" type="text/javascript"></script>
-
+<script src="__THEME__/teach/js/bootstrap.js" type="text/javascript"></script>
 <script>
   $(document).ready(function() {
   
@@ -37,39 +38,40 @@
     </div>
     <div class="head_m1" >
         <div class="head_mll">选择来源<span></span></div>
-        <ul id="subnav">
-            <li class="mainlevel" id="mainlevel_01"><a href="#">题型</a>
-                <p style="height:10px;"></p>
-                <ul class="sub_nav_01">
-                    <span class="Triangle_con1"></span>
-                    <li><a href="#">选择题</a></li>
-                    <li><a href="#">填空题</a></li>
-                    <li><a href="#">简答题</a></li>
-                </ul>
-            </li>
-            <li class="mainlevel" id="mainlevel_02"><a href="#">难度</a>
-                <p style="height:10px;"></p>
-                <ul class="sub_nav_01">
-                    <span class="Triangle_con1"></span>
-                    <li><a href="#">选择题</a></li>
-                    <li><a href="#">填空题</a></li>
-                    <li><a href="#">简答题</a></li>
-                </ul>
-            </li>
-            <li class="mainlevel"><a href="#">出题人</a>
-                <p style="height:10px;"></p>
-                <ul class="sub_nav_01" style="margin-left:-68px;">
-                    <span class="Triangle_con1"></span>
-                    <li><a href="#">选择题</a></li>
-                    <li><a href="#">填空题</a></li>
-                    <li><a href="#">简答题</a></li>
-                </ul>
-            </li>
-            <li class="mainlevel" style="width:140px;"><input name="" type="text" /><a href="#">来源</a>
-            </li>
-            </li>
-        </ul>
+
+        <div class="btn-group btn-group-col-md-1">
+            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">题型</span>
+            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+                <span class="Triangle_con1"></span>
+                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
+            </ul>
+        </div>
+        <div class="btn-group btn-group-col-md-1">
+            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">难度</span>
+            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+                <span class="Triangle_con1"></span>
+                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
+            </ul>
+        </div>
+        <div class="btn-group btn-group-col-md-1">
+            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">出题人</span>
+            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+                <span class="Triangle_con1"></span>
+                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
+            </ul>
+        </div>
+        <div class="btn-group btn-group-col-md-1">
+            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown"><input name="" type="text" /><a href="#">来源</a></span>
+        </div>
     </div>
+
+</div>
     <div class="head_r">
         <div class="eye"></div>
         <ul class="menu">
