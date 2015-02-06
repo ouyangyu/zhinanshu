@@ -50,7 +50,7 @@
             </dl>
         </li>
     </ul>
-    <div class="nr_green"><span class="arrow"></span><img src="images/toux.gif" /><span>屠志鹏</span></div>
+    <div class="nr_green"><span class="arrow"></span><img src="__THEME__/teach/images/toux.gif" /><span>屠志鹏</span></div>
 </div>
 <div class="head_m1" >
     <div class="head_mll">选择来源<span></span></div>
@@ -226,5 +226,111 @@
         <li>新建试卷</li>
     </ul>
 </div>
+
+
+<script>
+    var height = screen.height-$(".knowledgehEADEsTYLE").height()-$(".mouseOverLi").height();
+
+    //var width = screen.width - 265;
+
+    /*$(".rightWidthMax").css('min-width',width);
+     $(".headerWidth").css('min-width',width);*/
+    /*$(".container-fluid-questionRecord").css("height",screen.height);
+     $(".knowledgeList").css("height",height);
+     $(".questionList").css("height",height);*/
+    $(".knowledgeList").css("height",height-60);
+    $(".questionList").css("height",height-60);
+    $('.questionMouseOver').mouseover(function(){
+        $('.questionMouseOver').css('border','1px solid #C8CBCB');
+        $(this).css('border','1px solid #0C5FDF');
+    }).mouseout(function(){
+        $('.questionMouseOver').css('border','1px solid #C8CBCB');
+    });
+
+    $('.downloadChange').mouseover(function(){
+        $('.downloadChange img').attr('src',"");
+
+        $(this).children('img').attr('src',"");
+    }).mouseout(function(){
+        $('.downloadChange img').attr('src',"");
+    });
+    $('.deleteChange').mouseover(function(){
+        $('.deleteChange img').attr('src',"");
+
+        $(this).children('img').attr('src',"");
+    }).mouseout(function(){
+        $('.deleteChange img').attr('src',"");
+
+    });
+
+
+
+
+
+
+    $("#questionTypeList a").click(function(){
+
+        $("#questionType").text($(this).text());
+        $("#questionTypeView").val($(this).attr("data-type_id"));
+        viewQuestionList();
+    });
+    $("#questionDifficultList a").click(function(){
+
+        $("#questionDifficult").text($(this).text());
+
+        $("#questionDifficultView").val($(this).attr("data-difficult_id"));
+        viewQuestionList();
+    });
+    $("#questionTeacherList a").click(function(){
+
+        $("#questionTeacher").text($(this).text());
+        $("#questionTeacherView").val($(this).attr("data-teacher_id"));
+        viewQuestionList();
+
+    });
+    $("#questionWhereList a").click(function(){
+
+        $("#questionWhere").text($(this).text());
+        $("#whereView").val($(this).attr("data-where_id"));
+        viewQuestionList();
+    });
+
+
+    function viewQuestionList(){
+        var formData = $('#questionViewForm').serialize();
+        $.ajax({
+            type : "POST",
+            url  : "",
+            cache : false,
+            data : formData,
+            success : onSuccess,
+            error : onError
+        });
+        return false;
+
+    }
+
+    function onSuccess(data,status){
+        $('#questionListView').html(data);
+        //alert(data);
+    }
+    function onError(data,status){
+        //进行错误处理
+        //alert(data);
+    }
+
+
+
+
+    $('.dropdown-menu a').mousemove(function(){
+        //alert("2222");
+        $('.dropdown-menu a').css('color','#c9c9c9','float','#c9c9c9');
+
+
+        $(this).css('color','#02a411');
+
+    });
+
+</script>
 </body>
 </html>
