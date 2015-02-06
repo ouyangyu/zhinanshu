@@ -29,67 +29,64 @@
     </script>
 </head>
 <body>
-<div class="header" id="XX">
-    <div class="head_l" >
-        <ul>
-            <li class="logo">uTeach</li>
-            <li class="nav">组卷<span></span></li>
+v class="header" id="XX">
+<div class="head_l" >
+    <ul>
+        <li class="logo">uTeach</li>
+        <li class="nav">组卷<span></span></li>
+    </ul>
+</div>
+<div class="head_r" style="margin-top:10px;">
+    <div class="eye"></div>
+    <ul class="menu">
+        <li class="li_3">90分
+            <dl class="li_3_content">
+                <span class="Triangle_con"></span>
+                <p style="padding-top:10px;">选择题：<em class="subnavg">2</em>/25</p>
+                <p>必答题：<em class="subnavg">2</em>/25</p>
+                <p>选答题：<em class="subnavg">2</em>/25</p>
+                <p style="color:#01A310; text-align:center;">共计5道题</p>
+                <a class="revisebut">试卷生成</a>
+            </dl>
+        </li>
+    </ul>
+    <div class="nr_green"><span class="arrow"></span><img src="images/toux.gif" /><span>屠志鹏</span></div>
+</div>
+<div class="head_m1" >
+    <div class="head_mll">选择来源<span></span></div>
+
+    <div class="btn-group btn-group-col-md-1">
+        <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">题型</span>
+        <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+            <span class="Triangle_con1"></span>
+            <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+            <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+            <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
         </ul>
     </div>
-
-
-
-    <div class="head_r">
-        <div class="eye"></div>
-        <ul class="menu">
-            <li class="li_3">90分
-                <dl class="li_3_content">
-                    <span class="Triangle_con"></span>
-                    <p style="padding-top:10px;">选择题：<em class="subnavg">2</em>/25</p>
-                    <p>必答题：<em class="subnavg">2</em>/25</p>
-                    <p>选答题：<em class="subnavg">2</em>/25</p>
-                    <p style="color:#01A310; text-align:center;">共计5道题</p>
-                    <a class="revisebut" href="{:U('public/Index/proSJ')}">试卷生成</a>
-                </dl>
-            </li>
+    <div class="btn-group btn-group-col-md-1">
+        <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">难度</span>
+        <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+            <span class="Triangle_con1"></span>
+            <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+            <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+            <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
         </ul>
-        <div class="nr_green"><span class="arrow"></span><img src="__THEME__/teach/images/toux.gif" /><span>屠志鹏</span></div>
     </div>
-
-    <div class="head_m1" >
-        <div class="head_mll">选择来源<span></span></div>
-
-        <div class="btn-group btn-group-col-md-1">
-            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">题型</span>
-            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
-                <span class="Triangle_con1"></span>
-                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
-                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
-                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
-            </ul>
-        </div>
-        <div class="btn-group btn-group-col-md-1">
-            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">难度</span>
-            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
-                <span class="Triangle_con1"></span>
-                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
-                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
-                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
-            </ul>
-        </div>
-        <div class="btn-group btn-group-col-md-1">
-            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">出题人</span>
-            <ul id="questionTypeList" class="dropdown-menu" role="menu" >
-                <span class="Triangle_con1"></span>
-                <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
-                <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
-                <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
-            </ul>
-        </div>
-        <div class="btn-group btn-group-col-md-1">
-            <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown"><input name="" type="text" /><a href="#">来源</a></span>
-        </div>
+    <div class="btn-group btn-group-col-md-1">
+        <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown">出题人</span>
+        <ul id="questionTypeList" class="dropdown-menu" role="menu" >
+            <span class="Triangle_con1"></span>
+            <li><a  data-type_name="选择题" data-type_id="1" href="#">选择题</a></li>
+            <li><a  data-type_name="填空题" data-type_id="2" href="#">填空题</a></li>
+            <li><a  data-type_name="解答题" data-type_id="3" href="#">解答题</a></li>
+        </ul>
     </div>
+    <div class="btn-group btn-group-col-md-1">
+        <span id="questionType" class="btn dropdown-toggle" data-toggle="dropdown"><input name="" type="text" /><a href="#">来源</a></span>
+    </div>
+</div>
+
 </div>
 
 <div class="clear"></div>
